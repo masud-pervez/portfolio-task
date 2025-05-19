@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
+import { AiOutlineLink } from "react-icons/ai";
 import { FaCamera, FaPaintBrush } from "react-icons/fa";
 import { HiOutlineViewGrid } from "react-icons/hi";
 import { MdDesignServices, MdPhoneAndroid } from "react-icons/md";
@@ -30,7 +31,10 @@ const Portfolio = () => {
   const rightColumn = filteredItems.filter((_, idx) => idx % 2 !== 0);
 
   return (
-    <section id="portfolio" className="bg-[#171b1a] text-white py-10 px-6 md:px-12 lg:px-24">
+    <section
+      id="portfolio"
+      className="bg-[#171b1a] text-white py-10 px-6 md:px-12 lg:px-24"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         {/* Sidebar (hidden on mobile) */}
         <div className="col-span-12 lg:col-span-4 hidden lg:block"></div>
@@ -145,6 +149,15 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-black/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white text-lg font-semibold">{label}</p>
+                    <a href="#">
+                      <AiOutlineLink
+                        style={{
+                          boxShadow: "0px 10px 25px rgba(255, 255, 255, 0.09)",
+                        }}
+                        size={30}
+                        className="absolute rounded-full top-8 right-8 bg-black p-2"
+                      />
+                    </a>
                   </div>
                 </div>
               ))}
@@ -162,6 +175,15 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-black/75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <p className="text-white text-lg font-semibold">{label}</p>
+                    <a href="#">
+                      <AiOutlineLink
+                        style={{
+                          boxShadow: "0px 10px 25px rgba(255, 255, 255, 0.09)",
+                        }}
+                        size={30}
+                        className="absolute rounded-full top-8 right-8 bg-black p-2"
+                      />
+                    </a>
                   </div>
                 </div>
               ))}
@@ -170,17 +192,35 @@ const Portfolio = () => {
 
           {/* Additional Info Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-black h-52 shadow-lg rounded-xl p-6 flex justify-center items-center">
+            <div className="bg-black h-52 relative shadow-lg rounded-xl p-6 flex justify-center items-center">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">Website Design</h3>
                 <p className="text-gray-600">Fitness Studio Website</p>
               </div>
+              <a href="#">
+                <AiOutlineLink
+                  style={{
+                    boxShadow: "0px 10px 25px rgba(255, 255, 255, 0.09)",
+                  }}
+                  size={30}
+                  className="absolute rounded-full top-5 right-5 bg-black p-2"
+                />
+              </a>
             </div>
-            <div className="bg-black h-52 shadow-lg rounded-xl p-6 flex justify-center items-center">
+            <div className="bg-black h-52 relative shadow-lg rounded-xl p-6 flex justify-center items-center">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-2">Photography</h3>
                 <p className="text-gray-600">Photography Project</p>
               </div>
+              <a href="#">
+                <AiOutlineLink
+                  style={{
+                    boxShadow: "0px 10px 25px rgba(255, 255, 255, 0.09)",
+                  }}
+                  size={30}
+                  className="absolute rounded-full top-5 right-5 bg-black p-2"
+                />
+              </a>
             </div>
           </div>
         </div>
